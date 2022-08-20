@@ -1,0 +1,14 @@
+.center {
+    text-align: center;
+    align-items: center;
+  }
+
+.navigation-items {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+#personal_img {
+    float: right;
+}
