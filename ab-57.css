@@ -12,3 +12,43 @@
 #personal_img {
     float: right;
 }
+
+#send_email {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    margin-top: 25px;
+}
+
+button:hover {
+    background-color: #4ed8d1;
+}
+
+button:focus {
+    background-color: blue;
+}
+
+blockquote {
+    margin: 20px;
+    font-style: italic;
+  }
+  
+blockquote::before {
+    content: '';
+    font-style: normal;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #795548;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-image: url('https://webdev.express/static/quotes.png');
+}
+
+main {
+    background-image: url("technology.png");
+}
