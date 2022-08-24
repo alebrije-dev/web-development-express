@@ -14,7 +14,11 @@
                 return alert("Your email address is wrong.");
             }
             // should execute the delivering script
-            return alert("Your message has been delivered, you will receive a response soon.");
+            let form = document.getElementById("send_email");
+            form.action = "https://echo-form-body-u6ozq7lkydx0.runkit.sh/";
+            form.submit();
+            alert("Your message has been delivered, you will receive a response soon.");
+            return form.submit();
         }
 
         function verifyOther(){
@@ -73,18 +77,18 @@
         <br></br>
         <section id="contact">
             <h2><strong><blockquote>Contact</blockquote></strong></h2>
-            <form id="send_email" method="post" action="https://echo-form-body-u6ozq7lkydx0.runkit.sh/">
-                <input placeholder="Email" id="email" type="text" name="email"></input>
+            <form id="send_email" method="post">
+                <input placeholder="Email" id="email" type="text" name="email" class="form"></input>
                 <label class="form">Select your subject</label>
-                <select id="selectedSubject" onchange="verifyOther()">
+                <select id="selectedSubject" onchange="verifyOther()" class="form">
                     <option value="socializing">Socializing</option>
                     <option value="jobOffer">Job offer</option>
                     <option value="projects">Interested in your projects</option>
                     <option value="other" >Other</option>
                 </select>
-                <input id="otherSubject" hidden="true" name="subject" placeholder="Set your subject"></input>
+                <input id="otherSubject" hidden="true" name="subject" placeholder="Set your subject" class="form"></input>
                 <textarea placeholder="Message" id="message" class="form" name="message"></textarea>
-                <button onclick="sendMessage()" class="form">Submit</button>
+                <input type="button" onclick="sendMessage()" class="form" value="Submit"></input>
             </form>
         </section>
     </main>

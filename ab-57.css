@@ -19,6 +19,9 @@
 }
 
 .form {
+    width: 40%;
+    align-items: center;
+    margin: 0 auto;
     margin-top: 25px;
 }
 
